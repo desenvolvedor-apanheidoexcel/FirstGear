@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PrimeiraMarcha</string>
+    <string name="logo_oficina">logo</string>
+    <string name="telefone">telefone</string>
+    <string name="mapa">Mapa</string>
+
+    <string name="alert_titulo_descricao">Descrição</string>
+    <string name="alert_mensagem_no_descricao">Nenhuma descrição disponível...</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="descricaolongamodelo">A oficina Gecar presta serviços em Betim à mais de 30 anos, mantendo sempre a qualidade, respeito e transparência com seus clientes. Atuamos na área de funilaria e pintura, garantindo sempre sua satisfação em relação aos reparos em seu veículo, seja ele, usado ou semi novo, importado ou nacional. A garantia de nossos serviços é de 3 anos, tudo para garantirmos que nossos clientes se sintam sempre tranqüilos e satisfeitos. Serviços prestados. \\\\n-Funilaria\\\\n-Pintura\\\\n-Limpeza geral do veículo\\\\n-Serviços de mecânica\\\\n-Revitalização de pintura (contratação à parte)</string>
+    <string name="ligar">Ligar</string>
+    <string name="rota">Rota</string>
+    <string name="falha_atualizar">Ops, algo deu errado... \nPuxe para baixo para atualizar.</string>
+    <string name="titulo_indique_amigo">Indique um amigo preenchendo o formulário abaixo</string>
+    <string name="titulo_codigo_associacao">Código Associação:</string>
+    <string name="indique_amigo">Indique Amigo</string>
+    <string name="indicar">Indicar</string>
+
+</resources>

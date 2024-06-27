@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="falha_atualizar">Ops, algo deu errado... \nPuxe para baixo para atualizar.</string>
+    <string name="titulo_indique_amigo">Indique um amigo preenchendo o formulário abaixo</string>
+    <string name="indique_amigo">Indique Amigo</string>
+</resources>
