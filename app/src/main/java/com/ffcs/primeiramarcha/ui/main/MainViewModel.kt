@@ -10,10 +10,10 @@ import com.ffcs.primeiramarcha.repository.Resultado
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val repository: OficinasRepository) : ViewModel() {
-    private val mOficinasLiveData = MutableLiveData<List<Oficina>>()
+    private val mOficinasLiveData = MutableLiveData<List<Oficina>?>()
     private val mError = MutableLiveData<Boolean>()
 
-    val oficinas: LiveData<List<Oficina>>
+    val oficinas: MutableLiveData<List<Oficina>?>
         get() = mOficinasLiveData
 
     val error: LiveData<Boolean>
