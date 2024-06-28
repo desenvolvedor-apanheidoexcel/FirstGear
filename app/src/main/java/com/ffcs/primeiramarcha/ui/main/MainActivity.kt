@@ -104,11 +104,6 @@ class MainActivity : AppCompatActivity(),
             adapter = oficinasAdapter
         }
     }
-
-    private fun getErroRequest() {
-        oficinasAdapter.updateAdapter(arrayListOf())
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
