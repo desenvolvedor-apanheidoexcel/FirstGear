@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.2" />
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -28,98 +28,97 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtNomeOficina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/md_theme_onSecondaryContainer"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        tools:text="Oficina Gear" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDescricaoCurta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/md_theme_onSecondaryContainer"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeOficina"
+        tools:text="Lanternagem e Pintura" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtEndereco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@color/md_theme_onSecondaryContainer"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricaoCurta"
+        tools:text="R. Joaquim Laranjo, 432 - Industrial, Contagem - MG, 32220-360, Brasil" />
+
+    <LinearLayout
+        android:id="@+id/llTelefones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="@+id/txtEndereco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEndereco">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtNomeOficina"
-            android:layout_width="0dp"
+            android:id="@+id/txtTelefone1"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgLogo"
-            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
             android:textColor="@color/md_theme_onSecondaryContainer"
-            android:textSize="20sp"
-            android:gravity="center"
-            tools:text="Oficina Gear" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtDescricaoCurta"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNomeOficina"
-            android:textColor="@color/md_theme_onSecondaryContainer"
-            android:textSize="18sp"
-            android:gravity="center"
-            tools:text="Lanternagem e Pintura" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtEndereco"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDescricaoCurta"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/md_theme_onSecondaryContainer"
-            android:layout_marginStart="4dp"
-            android:gravity="center"
             android:textSize="14sp"
-            tools:text="R. Joaquim Laranjo, 432 - Industrial, Contagem - MG, 32220-360, Brasil" />
+            tools:text="31-34193100" />
 
-        <LinearLayout
-            android:id="@+id/llTelefones"
-            android:layout_width="0dp"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTelefone2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/txtEndereco"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
-            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
-            android:weightSum="2">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtTelefone1"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                tools:text="31-34193100"
-                android:textAlignment="center"
-                android:textColor="@color/md_theme_onSecondaryContainer"
-                android:textSize="14sp"
-                android:layout_weight="1"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtTelefone2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@+id/txtTelefone1"
-                app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
-                tools:text="31-34193100"
-                android:textAlignment="center"
-                android:textColor="@color/md_theme_onSecondaryContainer"
-                android:textSize="14sp"
-                android:layout_weight="1"/>
-        </LinearLayout>
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/md_theme_onSecondaryContainer"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/txtTelefone1"
+            app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
+            tools:text="31-34193100" />
+    </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@color/md_theme_onSecondaryContainer"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llTelefones"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/md_theme_onSecondaryContainer"
-        android:layout_marginStart="4dp"
-        android:gravity="center"
-        android:textSize="14sp"
         tools:text="contato@hinovamobile.com.br" />
 
     <ScrollView
@@ -144,26 +143,22 @@
 
     </ScrollView>
 
-
-
-
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9"/>
+        app:layout_constraintGuide_percent="0.9" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal"
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@+id/guideBottom">
 
         <com.google.android.material.button.MaterialButton
@@ -173,23 +168,23 @@
             android:layout_margin="4dp"
             android:layout_weight="1"
             android:contentDescription="@string/mapa"
-            app:icon="@drawable/map"
-            app:iconGravity="textStart"
+            android:foregroundTint="@color/white"
             android:text="@string/mapa"
-            android:foregroundTint="@color/white"/>
+            app:icon="@drawable/map"
+            app:iconGravity="textStart" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/iconTelefoneDetalhe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="4dp"
+            android:layout_weight="1"
             android:contentDescription="@string/telefone"
-            app:icon="@drawable/call"
-            app:iconGravity="textStart"
+            android:foregroundTint="@color/white"
             android:text="@string/ligar"
+            app:icon="@drawable/call"
 
-            android:foregroundTint="@color/white"/>
+            app:iconGravity="textStart" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

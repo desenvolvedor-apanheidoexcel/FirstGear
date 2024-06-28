@@ -9,7 +9,7 @@ import com.ffcs.primeiramarcha.repository.OficinasRepository
 import com.ffcs.primeiramarcha.repository.Resultado
 import kotlinx.coroutines.launch
 
-class RecommendationViewModel(private val repository: OficinasRepository): ViewModel() {
+class RecommendationViewModel(private val repository: OficinasRepository) : ViewModel() {
     private val mSucessoLiveData = MutableLiveData<String?>()
     private val mErrorLiveData = MutableLiveData<String?>()
 
@@ -19,7 +19,7 @@ class RecommendationViewModel(private val repository: OficinasRepository): ViewM
     val erroIndicacao: LiveData<String?>
         get() = mErrorLiveData
 
-    fun sendRecommendation(indicacao: IndicacaoEnvio){
+    fun sendRecommendation(indicacao: IndicacaoEnvio) {
         viewModelScope.launch {
             try {
                 when (val result = repository.enviaIndicacao(indicacao)) {

@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
-        android:text="Data:"
+        android:text="@string/data_titulo"
         android:textColor="@color/md_theme_onSecondaryContainer"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/txtNumeroCodigoAssociacao"
@@ -69,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/guideBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,9 +89,11 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCpfAssociado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CPF do associado" />
+                    android:hint="@string/cpf_do_associado"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -103,9 +106,10 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNomeAssociado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nome do associado" />
+                    android:hint="@string/nome_do_associado" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -118,9 +122,10 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailAssociado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email do associado" />
+                    android:hint="@string/email_do_associado" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -133,9 +138,10 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPlacaAssociado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Placa do associado" />
+                    android:hint="@string/placa_do_associado" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -148,9 +154,10 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTelefoneAssociado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telefone do associado" />
+                    android:hint="@string/telefone_do_associado" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -163,9 +170,10 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNomeAmigo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nome do Amigo" />
+                    android:hint="@string/nome_do_amigo" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -178,9 +186,10 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTelefoneAmigo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telefone do Amigo" />
+                    android:hint="@string/telefone_do_amigo" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -193,9 +202,26 @@
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailAmigo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email do Amigo" />
+                    android:hint="@string/email_do_amigo" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutObservacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputLayoutEmailAmigo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtObservacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/observa_es" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
@@ -236,8 +262,6 @@
             app:icon="@drawable/send"
             app:iconGravity="textStart" />
 
-
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

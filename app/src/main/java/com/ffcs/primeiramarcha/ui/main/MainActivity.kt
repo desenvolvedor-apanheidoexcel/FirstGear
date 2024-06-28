@@ -46,9 +46,6 @@ class MainActivity : AppCompatActivity(),
             binding.swiperefresh.isRefreshing = false
             binding.rvOficinas.visibility = View.GONE
             binding.llFalha.visibility = View.VISIBLE
-//            if (isError) {
-//                getErroRequest()
-//            }
         }
 
         setupActivity()
@@ -56,6 +53,7 @@ class MainActivity : AppCompatActivity(),
     }
 
     private fun setupActivity() {
+
         oficinasAdapter = MainOficinaAdapter(
             this@MainActivity,
             arrayListOf(),
@@ -122,7 +120,7 @@ class MainActivity : AppCompatActivity(),
         startActivity(intent)
     }
 
-    private fun goToActivityIndique(){
+    private fun goToActivityIndique() {
         val intent = Intent(this, RecommendationActivity::class.java)
         startActivity(intent)
     }

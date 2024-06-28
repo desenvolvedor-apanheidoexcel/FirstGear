@@ -7,8 +7,6 @@ import android.net.Uri
 import android.util.Base64
 import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.Calendar
 
 object Utilitarios {

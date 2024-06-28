@@ -3,4 +3,13 @@
     <string name="falha_atualizar">Ops, algo deu errado... \nPuxe para baixo para atualizar.</string>
     <string name="titulo_indique_amigo">Indique um amigo preenchendo o formulário abaixo</string>
     <string name="indique_amigo">Indique Amigo</string>
+    <string name="data_titulo">Data:</string>
+    <string name="nome_do_associado">Nome do associado</string>
+    <string name="email_do_associado">Email do associado</string>
+    <string name="placa_do_associado">Placa do associado</string>
+    <string name="telefone_do_associado">Telefone do associado</string>
+    <string name="nome_do_amigo">Nome do Amigo</string>
+    <string name="telefone_do_amigo">Telefone do Amigo</string>
+    <string name="email_do_amigo">Email do Amigo</string>
+    <string name="observa_es">Observações</string>
 </resources>

@@ -4,6 +4,7 @@ import com.ffcs.primeiramarcha.constants.Constants
 import com.ffcs.primeiramarcha.interfaces.PrimeiraMarchaService
 import com.ffcs.primeiramarcha.repository.OficinasRepository
 import com.ffcs.primeiramarcha.ui.main.MainViewModel
+import com.ffcs.primeiramarcha.ui.recommendation.RecommendationViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -36,6 +37,8 @@ val repositoryModule = module {
 
 val viewModelModule = module {
     viewModel<MainViewModel> { MainViewModel(get()) }
+    viewModel<RecommendationViewModel> { RecommendationViewModel(get()) }
+
 }
 
 val appModules = listOf(

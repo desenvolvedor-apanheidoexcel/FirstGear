@@ -6,37 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/md_theme_primary"
+        android:theme="@style/ToolbarTheme"
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Primeira Marcha"
-        app:titleTextColor="@color/white" />
-
-
-
-<!--    <com.google.android.material.appbar.AppBarLayout-->
-<!--        android:id="@+id/appBarLayout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:id="@+id/topAppBar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@color/md_theme_primary"-->
-<!--            android:minHeight="?attr/actionBarSize"-->
-<!--            app:title="Primeira Marcha"-->
-<!--            app:titleTextColor="@color/white" />-->
-
-<!--    </com.google.android.material.appbar.AppBarLayout>-->
+        app:title="Primeira Marcha" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swiperefresh"
@@ -61,8 +41,6 @@
             tools:listitem="@layout/item_oficina"
             android:visibility="visible"/>
 
-
-
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <LinearLayout
@@ -81,7 +59,8 @@
             android:layout_height="56dp"
             android:layout_gravity="center"
             android:src="@drawable/arrow_downward"
-            app:tint="@color/md_theme_primary" />
+            app:tint="@color/md_theme_primary"
+            android:contentDescription="@string/logo_oficina" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
@@ -93,8 +72,5 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

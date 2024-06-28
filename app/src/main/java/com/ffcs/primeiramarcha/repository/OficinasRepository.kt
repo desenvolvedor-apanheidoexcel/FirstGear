@@ -2,10 +2,8 @@ package com.ffcs.primeiramarcha.repository
 
 import com.ffcs.primeiramarcha.constants.Constants
 import com.ffcs.primeiramarcha.interfaces.PrimeiraMarchaService
-import com.ffcs.primeiramarcha.model.Indicacao
 import com.ffcs.primeiramarcha.model.IndicacaoEnvio
 import com.ffcs.primeiramarcha.model.Oficina
-import com.ffcs.primeiramarcha.model.RetornoErro
 
 sealed class Resultado<out R> {
     data class Sucesso<out T>(val dado: T?) : Resultado<T?>()
@@ -17,7 +15,10 @@ class OficinasRepository(
 ) {
     suspend fun buscaOficinas(): Resultado<List<Oficina>?> {
         return try {
-            val resposta = service.buscaOficinas(codigoAssociacao = Constants.codigoAssociacao, cpfAssociado = null)
+            val resposta = service.buscaOficinas(
+                codigoAssociacao = Constants.codigoAssociacao,
+                cpfAssociado = null
+            )
             if (resposta.isSuccessful) {
                 Resultado.Sucesso(dado = resposta.body()?.ListaOficinas)
             } else {
@@ -29,16 +30,16 @@ class OficinasRepository(
     }
 
     suspend fun enviaIndicacao(indicacao: IndicacaoEnvio): Resultado<String?> {
-        return try{
+        return try {
             val resposta = service.enviaIndicacao(indicacao)
-            if(resposta.isSuccessful){
+            if (resposta.isSuccessful) {
                 Resultado.Sucesso(dado = resposta.body()?.Sucesso)
-            }else{
+            } else {
                 Resultado.Erro(java.lang.Exception(resposta.message()))
             }
 
-        }catch (e: Exception){
-            Resultado.Erro(exception = java.lang.Exception("Falha ao enviar indicação." ))
+        } catch (e: Exception) {
+            Resultado.Erro(exception = java.lang.Exception("Falha ao enviar indicação."))
         }
     }
 }
